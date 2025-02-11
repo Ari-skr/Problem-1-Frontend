@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Bodyelem.css";
-url = "http://localhost:4001/"
+
 
 const Bodyelem = () => {
   const [formdata, setformdata] = useState({ secret_key: "" });
@@ -20,7 +20,7 @@ const Bodyelem = () => {
         body: JSON.stringify(formdata),
       };
       try {
-        const response = await fetch(`${url}`, requestOptions);
+        const response = await fetch(`http://localhost:5050/`, requestOptions);
         const data = await response.json();
         setstr(data.message);
       } catch (error) {
@@ -33,7 +33,7 @@ const Bodyelem = () => {
         body: JSON.stringify(formdata),
       };
       try {
-        const response = await fetch("http://localhost:4001/", requestOptions2);
+        const response = await fetch("http://localhost:5050/", requestOptions2);
         const data = await response.json();
         console.log(data.message);
         if(!data){

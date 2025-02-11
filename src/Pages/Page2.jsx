@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../components/Page2.css";
-url = "http://localhost:4001"
+
 
 const Page2 = () => {
   const [formdata, setformdata] = useState({
@@ -16,7 +16,7 @@ const Page2 = () => {
     e.preventDefault(); 
     setgivep(1) 
     try {
-      const response = await fetch(`${url}/hype354789636`, {
+      const response = await fetch(`http://localhost:5050/hype354789636`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
