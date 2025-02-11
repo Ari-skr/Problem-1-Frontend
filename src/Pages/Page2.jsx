@@ -16,7 +16,7 @@ const Page2 = () => {
     e.preventDefault(); 
     setgivep(1) 
     try {
-      const response = await fetch(`http://localhost:5050/hype354789636`, {
+      const response = await fetch(`http://13.233.102.44:5050/hype354789636`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
