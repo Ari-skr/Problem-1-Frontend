@@ -20,7 +20,7 @@ const Bodyelem = () => {
         body: JSON.stringify(formdata),
       };
       try {
-        const response = await fetch(`http://localhost:5050/`, requestOptions);
+        const response = await fetch(`http://13.233.102.44:5050/`, requestOptions);
         const data = await response.json();
         setstr(data.message);
       } catch (error) {
